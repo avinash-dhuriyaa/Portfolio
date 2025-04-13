@@ -33,11 +33,11 @@ function headerShadow() {
 
 /* ----- TYPING EFFECT ----- */
 var typingEffect = new Typed(".typedText",{
-  strings : ["Frontend Developer"],
+  strings : ["Frontend Developer","Backend Developer"],
   loop : true,
-  typeSpeed : 100, 
-  backSpeed : 80,
-  backDelay : 2000
+  typeSpeed : 90, 
+  backSpeed : 90,
+  backDelay : 1500
 })
 
 
@@ -88,7 +88,10 @@ reset: true
 srRight.reveal('.skills-box',{delay: 100})
 srRight.reveal('.form-control',{delay: 100})
 
-
+function toggleChat() {
+  const chatBox = document.getElementById("chatPopup");
+  chatBox.style.display = chatBox.style.display === "flex" ? "none" : "flex";
+}
 
 /* ----- CHANGE ACTIVE LINK ----- */
 
@@ -115,3 +118,20 @@ sections.forEach(current =>{
 }
 
 window.addEventListener('scroll', scrollActive)
+
+
+// mousemove Animation
+const emojis = ['🤖', '💀', '💀', '😎', '👻','👻', '👽', ]; // Array of emojis
+
+document.addEventListener("mousemove", function (e) {
+  const trail = document.createElement("div");
+  trail.classList.add("mouse-trail");
+  trail.innerHTML = emojis[Math.floor(Math.random() * emojis.length)]; // Random emoji
+  trail.style.left = `${e.clientX}px`;
+  trail.style.top = `${e.clientY}px`;
+  document.body.appendChild(trail);
+
+  setTimeout(() => {
+    trail.remove();
+  }, 800); // Match animation duration
+});
