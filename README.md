@@ -1,1 +1,1 @@
-link  https://avinash-dhuriyaa.github.io/Portfolio/
+link https://avinash-dhuriya-portfolio.netlify.app/
