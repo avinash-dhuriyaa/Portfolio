@@ -3,18 +3,23 @@
 
 /* ----- VARIABLES ----- */
 :root {
-  --body-color: white;
-  --color-white: rgb(219, 214, 227);
+  --body-color: #0f0f10; /* Deep charcoal base */
+  --color-white: #e6e6e9; /* Soft light for text */
 
-  --text-color-second: rgb(69, 8, 8);
-  --text-color-third: rgb(50, 224, 215);
+  --text-color-second: #c2c3c7; /* Muted gray text */
+  --text-color-third: #087f75; /* Soft sky blue highlights */
 
-  --first-color: rgb(69, 8, 8);
-  --first-color-hover: rgb(14, 76, 222);
+  --first-color: #408996; /* Cards, navs - slightly lighter than bg */
+  --first-color-hover: #4cc9f0; /* Bright cyan-ish hover */
 
-  --second-color: rgb(0, 201, 255);
-  --third-color: rgb(214, 32, 8);
-  --first-shadow-color: rgba(227, 211, 221, 0);
+  --second-color: #553b6c; /* Light pink accent (for buttons/badges) */
+  --third-color: #c36363; /* Soft purple for tags or badges */
+
+  --first-shadow-color: rgba(255, 255, 255, 0.03); /* Minimal light shadow */
+
+  /* Optional gradient background */
+  --bg-gradient: linear-gradient(135deg, #1a1c22 0%, #111217 100%);
+  
 }
 
 /* ----- BASE ----- */
@@ -94,11 +99,11 @@ i {
 
 /* ------- BASE -------- */
 body {
-  background: var(--body-color);
-  margin: 0;
-  background: var(--body-color); /* ya #0f172a, jo tum chaho */
-  /* cursor: n; */
+  background: linear-gradient(to right, #6e4a2a, #4a4f98);
+  color: #222;
+  
 }
+
 .container {
   width: 100%;
   position: relative;
@@ -368,23 +373,26 @@ nav {
 .featured-text-btn > .blue-btn:hover {
   background: var(--second-color);
 }
-.social_icons {
-  display: flex;
-  margin-top: 5em;
-  gap: 30px;
+.social-icons {
+  margin: 20px 0;
 }
-.icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
+.social-icons a {
+  color: #333; /* Default color */
+  font-size: 24px;
+  margin: 0 10px;
+  transition: color 0.3s;
 }
-.icon:hover {
-  color: var(--first-color);
+.social-icons a:hover {
+  color: #0077b5; /* Change color on hover */
+}
+.fa-github:hover {
+  color: #333;
+}
+.fa-linkedin:hover {
+  color: #0077b5;
+}
+.fa-instagram:hover {
+  color: #e4405f;
 }
 
 /* ----- FEATURED IMAGE BOX ----- */
@@ -426,7 +434,7 @@ nav {
   height: 50px;
   gap: 5px;
   text-decoration: none;
-  color: var(--text-color-second);
+  color: black;
   background: var(--color-white);
   border-radius: 30px;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
@@ -578,57 +586,179 @@ nav {
   }
 }
 
-.skills {
-  padding-block: 5em;
-  text-align: center;
+.skills-section {
+  margin-top: 80px;
 }
 
-.skills-container {
+.top-header h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+.skills-flex-container {
   display: flex;
-  flex-direction: column;
-  gap: 40px;
-  margin-top: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.skills-orbit {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  min-width: 350px;
+}
+
+.skills-lists {
+  flex: 1;
+  min-width: 350px;
+}
+
+@media (max-width: 768px) {
+  .skills-flex-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .skills-grid {
+    justify-content: center;
+  }
+
+  .skills-orbit {
+    margin-bottom: 40px;
+  }
+}
+
+.skills-category {
+  margin-bottom: 40px;
 }
 
 .skills-category h2 {
-  font-size: 26px;
-  margin-bottom: 30px;
-  color: var(--text-color-second);
+  font-size: 24px;
+  color: #a3e635;
+  margin-bottom: 20px;
 }
 
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
+  gap: 20px;
 }
 
 .skill-card {
-  width: 100px;
-  background: var(--color-white);
-  padding: 15px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 10px var(--first-shadow-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: 0.3s;
-}
-
-.skill-card:hover {
-  transform: scale(1.05);
+  width: 120px;
+  text-align: center;
 }
 
 .skill-card img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
+  margin-bottom: 10px;
 }
 
 .skill-card p {
-  margin-top: 10px;
   font-size: 14px;
-  color: var(--text-color-second);
+  color: #fff;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .skills-grid {
+    justify-content: center;
+  }
+}
+
+/* Tech Circle Styles */
+.tech-orbit-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px 0;
+  position: relative;
+}
+
+.circle-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.circle-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px dashed #ffffff33; /* light dashed line */
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.rotating-ring {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: rotate 20s linear infinite;
+}
+
+.icon-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform-origin: center center;
+  pointer-events: none; /* Let inner icon handle hover */
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.icon:hover {
+  transform: translateX(-50%) scale(1.2);
+}
+
+.icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.center-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #00ffff, #ff00ff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.center-icon img {
+  width: 50%;
+  height: 50%;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .project-container {

@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/images/a.png" type="image/x-icon">
     <title>Avinash Dhuriya</title>
@@ -94,12 +98,28 @@
               
                 <a href="avi.pdf"><button class="btn"> Resume <i class="uil uil-file-alt"></i></button></a>
             </div>
-            <div class="social_icons">
-             
-               <a href="https://www.linkedin.com/in/avinash-dhuriya/"> <div class="icon"><i class="uil uil-linkedin-alt"></i></div></a>
-               <a href="https://github.com/avinash-dhuriyaa">  <div class="icon"><i class="uil uil-github-alt"></i></div></a> 
-               <a href="https://www.instagram.com/avirock_kashyap/"><div class="icon"><i class="uil uil-instagram"></i></div></a>
-            </div>
+            <div class="social-icons">
+              <a href="https://github.com/avinash-dhuriyaa" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+              </a>
+              <a href="https://www.linkedin.com/in/avinash-dhuriya/" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect x="2" y="9" width="4" height="12"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                  </svg>
+              </a>
+              <a href="https://www.instagram.com/avinash_dhuriya07/" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                  </svg>
+              </a>
+          </div>
+            
           </div>
           <div class="featured-image">
             <div class="image">
@@ -143,81 +163,106 @@
     </div>
   </section>
        <!-- -------------- SKILLS BOX ---------------- -->
-       <section class="section" id="skills">
+       <section class="skills-section">
         <div class="top-header">
-          <h1>Skills</h1>
+          <h1>Tech Stack</h1>
         </div>
-        <div class="skills-category">
-          <h2>Front-end</h2>
-          <div class="skills-grid">
-            <div class="skill-card"><img src="assets/images/js.png" alt="JavaScript"><p>JavaScript</p></div>
-            <div class="skill-card"><img src="assets/images/react.png" alt="React"><p>React.js</p></div>
-            <div class="skill-card"><img src="assets/images/Tailwind.png" alt="Redux"><p>Tailwind</p></div>
-            <div class="skill-card"><img src="assets/images/html.png" alt="HTML5"><p>HTML5</p></div>
-            <div class="skill-card"><img src="assets/images/css.png" alt="CSS3"><p>CSS3</p></div>
-            <div class="skill-card"><img src="assets/images/Redux.png" alt="Sass"><p>Redux</p></div>
-            <div class="skill-card"><img src="assets/images/TypeScript.png" alt="Bootstrap"><p>TypeScript</p></div>
+      
+        <!-- 👇 Wrap both Orbit + Skills in flex container -->
+        <div class="skills-flex-container">
+          <!-- 🔄 Tech Circle Orbit Section Start -->
+          <div class="skills-orbit">
+            <div class="tech-orbit-wrapper">
+              <div class="circle-container">
+                <div class="rotating-ring">
+                  <div class="icon-wrapper" style="transform: rotate(0deg);">
+                    <div class="icon"><img src="assets/images/react.png" alt="React"></div>
+                  </div>
+                  <div class="icon-wrapper" style="transform: rotate(51.43deg);">
+                    <div class="icon"><img src="assets/images/js.png" alt="JavaScript"></div>
+                  </div>
+                  <div class="icon-wrapper" style="transform: rotate(102.86deg);">
+                    <div class="icon"><img src="assets/images/css.png" alt="CSS3"></div>
+                  </div>
+                  <div class="icon-wrapper" style="transform: rotate(154.29deg);">
+                    <div class="icon"><img src="assets/images/Node.js.png" alt="Node.js"></div>
+                  </div>
+                  <div class="icon-wrapper" style="transform: rotate(205.71deg);">
+                    <div class="icon"><img src="assets/images/mongodb.png" alt="MongoDB"></div>
+                  </div>
+                  <div class="icon-wrapper" style="transform: rotate(257.14deg);">
+                    <div class="icon"><img src="assets/images/MySQL.png" alt="MySQL"></div>
+                  </div>
+                  <div class="icon-wrapper" style="transform: rotate(308.57deg);">
+                    <div class="icon"><img src="assets/images/Redux.png" alt="Redux"></div>
+                  </div>
+                </div>
+      
+                <div class="center-icon">
+                  <img src="https://img.icons8.com/ios-filled/100/monitor--v1.png" alt="Monitor" />
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="skills-category">
-          <h2>Back-end</h2>
-          <div class="skills-grid">
-            <div class="skill-card"><img src="assets/images/mongodb.png" alt="MongoDB"><p>MongoDB</p></div>
-            <div class="skill-card"><img src="assets/images/Node.js.png" alt="Node.js"><p>Node.js</p></div>
-            <div class="skill-card"><img src="assets/images/Java.png" alt="Java"><p>Java</p></div>
-            <div class="skill-card"><img src="assets/images/MySQL.png" alt="MySQL"><p>MySQL</p></div>
-            <div class="skill-card"><img src="assets/images/Git.png" alt="Git"><p>Git</p></div>
+          <!-- 🔄 Tech Circle Orbit Section End -->
+      
+          <!-- Skills Text Section -->
+          <div class="skills-lists">
+            <div class="skills-category">
+              <h2>Front-end</h2>
+              <div class="skills-grid">
+                <div class="skill-card"><img src="assets/images/js.png" alt="JavaScript"><p>JavaScript</p></div>
+                <div class="skill-card"><img src="assets/images/react.png" alt="React"><p>React.js</p></div>
+                <div class="skill-card"><img src="assets/images/Tailwind.png" alt="Tailwind"><p>Tailwind</p></div>
+                <div class="skill-card"><img src="assets/images/html.png" alt="HTML5"><p>HTML5</p></div>
+                <div class="skill-card"><img src="assets/images/css.png" alt="CSS3"><p>CSS3</p></div>
+                <div class="skill-card"><img src="assets/images/Redux.png" alt="Redux"><p>Redux</p></div>
+              </div>
+            </div>
+      
+            <div class="skills-category">
+              <h2>Back-end</h2>
+              <div class="skills-grid">
+                <div class="skill-card"><img src="assets/images/mongodb.png" alt="MongoDB"><p>MongoDB</p></div>
+                <div class="skill-card"><img src="assets/images/Node.js.png" alt="Node.js"><p>Node.js</p></div>
+                <div class="skill-card"><img src="assets/images/Java.png" alt="Java"><p>Java</p></div>
+                <div class="skill-card"><img src="assets/images/MySQL.png" alt="MySQL"><p>MySQL</p></div>
+                <div class="skill-card"><img src="assets/images/Git.png" alt="Git"><p>Git</p></div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
        <!-- -------------- PROJECT BOX ---------------- -->
        <section class="section" id="projects">
-        <div class="top-header">
-          <h1>Projects</h1>
-        </div>
-        <div class="project-container">        
-          
-          <div class="project-box"> 
-            <a href="https://avinash-dhuriya-marvel-gallery.netlify.app/" target="_blank">
-              <img src="mr1.webp" alt="Marvel-Gallery">
-            </a>
-            <h1>Marvel-Gallery</h1>
-          </div>
-          <div class="project-box">             
-            <a href="https://avinash-dhuriyaa.github.io/iCoder-Programming-Quiz/" target="_blank">
-              <img src="mr2.png" alt="Programming-Quiz">
-            </a>
-            <h1>Programming-Quiz</h1>  
-          </div>
-          <div class="project-box">
-            <a href="https://your-live-link-here/weather-app" target="_blank">
-              <img src="mr4.jpg" alt="Weather-App">
-            </a>
-            <h1>Weather-App</h1>
-          </div>
-      
-          <div class="project-box">
-            <a href="https://your-live-link-here/portfolio" target="_blank">
-              <img src="mr5.png" alt="Portfolio">
-            </a>
-            <h1>Portfolio</h1>
-          </div>
-      
-          <div class="project-box">
-            <a href="https://avinash-dhuriya-typing-test.netlify.app/" target="_blank">
-              <img src="mr6.png" alt="Typing-Test">
-            </a>
-            <h1>Typing-Test</h1>
-          </div>
-      
-          <div class="project-box">
-            <a href="https://your-live-link-here/adventure-web" target="_blank">
-              <img src="mr7.png" alt="Adventure-web">
-            </a>
-            <h1>Adventure-web</h1>
-          </div>    
-        </div>
-      </section>
+  <div class="top-header">
+    <h1 class="project-title">Projects</h1>
+  </div>
+
+  <div class="project-container">        
+    <div class="project-box"> 
+      <a href="https://avinash-dhuriya-marvel-gallery.netlify.app/" target="_blank">
+        <img src="mr1.webp" alt="Marvel-Gallery">
+      </a>
+      <h1>Marvel-Gallery</h1>
+    </div>
+    
+    <div class="project-box">             
+      <a href="https://avinash-dhuriyaa.github.io/iCoder-Programming-Quiz/" target="_blank">
+        <img src="mr2.png" alt="Programming-Quiz">
+      </a>
+      <h1>Programming-Quiz</h1>  
+    </div>
+
+    <div class="project-box">
+      <a href="https://avinash-dhuriya-typing-test.netlify.app/" target="_blank">
+        <img src="mr6.png" alt="Typing-Test">
+      </a>
+      <h1>Typing-Test</h1>
+    </div>
+  </div>
+</section>
+
        <!-- -------------- CONTACT BOX ---------------- -->
        <section class="section" id="contact">
           <div class="top-header">
@@ -271,11 +316,32 @@
                 </li>
             </ul>
         </div>
-        <div class="footer-social-icons">
+        <!-- <div class="footer-social-icons">
             <a href="https://www.instagram.com/avirock_kashyap/"><div class="icon"><i class="uil uil-instagram"></i></div></a>
            <a href="https://www.linkedin.com/in/avinash-dhuriya/"> <div class="icon"><i class="uil uil-linkedin-alt"></i></div></a>
           <a href="https://github.com/avinash-dhuriyaa">  <div class="icon"><i class="uil uil-github-alt"></i></div></a> 
-        </div>
+        </div> -->
+        <div class="social-icons">
+          <a href="https://github.com/avinash-dhuriyaa" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/avinash-dhuriya/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+          </a>
+          <a href="https://www.instagram.com/avinash_dhuriya07/" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+          </a>
+      </div>
         <div class="bottom-footer">
             <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Avinash Dhuriya</a> - All rights reserved</p>
         </div>
@@ -285,5 +351,7 @@
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="assets/js/main.js"></script>
+    
 </body>
+
 </html>

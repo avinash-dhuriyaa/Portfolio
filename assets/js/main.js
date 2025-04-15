@@ -132,3 +132,4 @@ document.addEventListener("mousemove", function (e) {
     trail.remove();
   }, 800); // Match animation duration
 });
+
