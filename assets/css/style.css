@@ -870,6 +870,22 @@ nav {
   font-size: 0.95rem;
   color: #cccccc;
 }
+.github-btn {
+  margin-top: 12px;
+  padding: 4px 14px;
+  background-color: #24292e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.github-btn:hover {
+  background-color: #0366d6;
+}
+
 
 /* ----- CONTACT BOX ----- */
 .contact-info {
